@@ -3,8 +3,21 @@ import com.github.benmanes.gradle.versions.updates.DependencyUpdatesTask
 
 buildscript {
     repositories {
+        mavenLocal()
+        gradlePluginPortal()
+        maven { setUrl("https://maven.aliyun.com/repository/central") }
+        maven { setUrl("https://maven.aliyun.com/repository/google") }
+        maven { setUrl("https://maven.aliyun.com/repository/jcenter") }
+        maven { setUrl("https://maven.aliyun.com/repository/public") }
+        maven { setUrl("https://maven.aliyun.com/repository/gradle-plugin") }
+        maven { setUrl("https://maven.aliyun.com/repository/grails-core") }
+        maven { setUrl("https://gitee.com/liuchaoya/libcommon/raw/master/repository/") }
+        maven { setUrl("https://repo.eclipse.org/content/repositories/paho-snapshots/") }
+        maven { setUrl("https://developer.huawei.com/repo/") }
+        maven { setUrl("https://jitpack.io") }
+        maven { setUrl("https://www.jitpack.io") }
+        mavenCentral()
         google()
-        jcenter()
     }
     dependencies {
         classpath(deps.plugins.android)
@@ -22,11 +35,21 @@ plugins {
 
 allprojects {
     repositories {
-        google()
-        jcenter()
         mavenLocal()
-        mavenCentral()
+        maven { setUrl("https://maven.aliyun.com/repository/central") }
+        maven { setUrl("https://maven.aliyun.com/repository/google") }
+        maven { setUrl("https://maven.aliyun.com/repository/jcenter") }
+        maven { setUrl("https://maven.aliyun.com/repository/public") }
+        maven { setUrl("https://maven.aliyun.com/repository/gradle-plugin") }
+        maven { setUrl("https://maven.aliyun.com/repository/grails-core") }
+        maven { setUrl("https://raw.githubusercontent.com/saki4510t/libcommon/master/repository/") }
+        maven { setUrl("https://gitee.com/liuchaoya/libcommon/raw/master/repository/") }
+        maven { setUrl("https://repo.eclipse.org/content/repositories/paho-snapshots/") }
+        maven { setUrl("https://developer.huawei.com/repo/") }
         maven { setUrl("https://jitpack.io") }
+        maven { setUrl("https://www.jitpack.io") }
+        mavenCentral()
+        google()
     }
 
     apply(plugin = "org.jmailen.kotlinter")
