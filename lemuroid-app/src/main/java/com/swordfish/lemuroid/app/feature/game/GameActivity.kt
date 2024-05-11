@@ -87,7 +87,7 @@ class GameActivity : RetrogradeActivity() {
         gameViewLayout = findViewById(R.id.gameview_layout)
         padLayout = findViewById(R.id.pad_layout)
 
-        val systemId = intent.getStringExtra(EXTRA_SYSTEM_ID)
+        val systemId = intent.getStringExtra(EXTRA_SYSTEM_ID)!!
 
         val directoriesManager = DirectoriesManager(applicationContext)
 
@@ -96,8 +96,8 @@ class GameActivity : RetrogradeActivity() {
 
         retroGameView = GLRetroView(
                 this,
-                intent.getStringExtra(EXTRA_CORE_PATH),
-                intent.getStringExtra(EXTRA_GAME_PATH),
+                intent.getStringExtra(EXTRA_CORE_PATH)!!,
+                intent.getStringExtra(EXTRA_GAME_PATH)!!,
                 directoriesManager.getSystemDirectory().absolutePath,
                 directoriesManager.getSavesDirectory().absolutePath,
                 getShaderForSystem(useShaders, systemId)

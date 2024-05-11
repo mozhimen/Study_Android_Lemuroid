@@ -4,7 +4,6 @@ plugins {
     id("com.android.application")
     id("com.bugsnag.android.gradle")
     id("kotlin-android")
-    id("kotlin-android-extensions")
     id("kotlin-kapt")
     id("androidx.navigation.safeargs.kotlin")
 }

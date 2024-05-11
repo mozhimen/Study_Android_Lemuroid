@@ -8,7 +8,7 @@ import com.swordfish.lemuroid.lib.library.db.RetrogradeDatabase
 class SystemsViewModel(retrogradeDb: RetrogradeDatabase) : ViewModel() {
 
     class Factory(val retrogradeDb: RetrogradeDatabase) : ViewModelProvider.Factory {
-        override fun <T : ViewModel?> create(modelClass: Class<T>): T {
+        override fun <T : ViewModel> create(modelClass: Class<T>): T {
             return SystemsViewModel(retrogradeDb) as T
         }
     }

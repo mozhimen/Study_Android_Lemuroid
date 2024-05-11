@@ -1,7 +1,7 @@
 /* ktlint-disable no-multi-spaces max-line-length */
 object deps {
     object android {
-        const val compileSdkVersion = 29
+        const val compileSdkVersion = 31
         const val targetSdkVersion  = 29
         const val minSdkVersion     = 23
         const val buildToolsVersion = "28.0.3"
@@ -18,7 +18,7 @@ object deps {
         const val okHttp          = "3.12.0"
         const val retrofit        = "2.5.0"
         const val work            = "2.3.0-beta01"
-        const val navigation      = "2.1.0"
+        const val navigation      = "2.5.3"
         const val rxbindings      = "3.0.0"
         const val lifecycle       = "2.1.0"
         const val libretrodroid   = "a52b6dadf1"
